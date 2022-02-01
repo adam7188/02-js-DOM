@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Titel</h1>
+    </header>
+    <main>
+        <h2>Undertitel</h2>
+        <section>
+            <article id="article_1"> 
+                <img src="https://placeimg.com/640/480/any">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium aliquam ullam praesentium quod dolores sint tempore ab veniam quibusdam. Sint hic sit, explicabo odio expedita ducimus voluptate eum error suscipit repellendus magnam cupiditate enim aliquid omnis similique. Ipsa commodi cum minima? Hic odio natus molestiae minima laborum fuga dicta quaerat.</p>
+            </article>
+            <article id="article_2">
+                <img src="https://placeimg.com/640/480/any">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vero magni perferendis culpa voluptates cupiditate ea ducimus sint cumque in eaque praesentium molestias facilis, modi aspernatur pariatur doloremque tempora necessitatibus libero earum repellendus quasi? Dolor, corporis odio illo dignissimos officia ab blanditiis officiis ratione sint, beatae distinctio, culpa maiores qui?</p>
+            </article>
+        </section>
+    </main>
+    <footer>This is the footer</footer>
+    <script>
+       const header = document.querySelector("h1");
+       console.log(header);
+
+       const h1 = document.querySelector("h1");
+
+       
+       const h2 = document.querySelector("h2");
+       console.log(h2);
+
+    //    const h3 = document.querySelector("h3");
+    //    console.log(h3);
+
+       const article1 = document.querySelector("article:nth-child(1)")
+       console.log(article1)
+       
+       const article1img = document.querySelector("article:nth-child(1) img")
+       console.log(article1img)
+       
+       const article1h3 = document.querySelector("article:nth-child(1) h3")
+       console.log(article1h3)
+       
+       const article1p = document.querySelector("article:nth-child(1) p")
+       console.log(article1p)
+       
+       const article2 = document.querySelector("article:nth-child(2)")
+       console.log(article2)
+       
+       const article2img = document.querySelector("article:nth-child(2) img")
+       
+       console.log(article2img)
+       
+       const article2h3 = document.querySelector("article:nth-child(2) h3")
+       
+       console.log(article2h3)
+       
+       const article2p = document.querySelector("article:nth-child(2) p")
+       console.log(article2p)
+
+       const footer = document.querySelector("footer");
+       console.log(footer);
+
+
+       //Øvelse 2 - Skifter diverse ting//
+       h1.textContent = "Ny titel";
+
+       h2.textContent = "Ny undertitel";
+
+       article1h3.textContent = "Ny h3";
+
+       article1p.textContent = "Ny tekst";
+
+       article2h3.textContent = "Ny h3 (2)";
+
+       article2p.textContent = "Ny tekst (2)";
+
+       //Øvelse 3 - skifter billederne i de to articles//
+
+       article1img.src = "newpic1.jpg";
+       article1img.alt = "naturbillede_1";
+       
+       article2img.src = "newpic2.jpg";
+       article2img.alt = "naturbillede_2";
+
+       //Øvelse 4 - tilføj nyt element//
+
+       let mainSection = document.querySelector("section");
+       let newArticle = document.createElement("article");
+       let overskrift = document.createElement("h3");
+       let overskriftText = document.createTextNode("Dette er en ny overskrift");
+       let paragraph = document.createElement("p");
+       let paragraphText = document.createTextNode("Dette er en helt ny tekst");
+       let picture = document.createElement("img");
+
+       //skifter overskrift på den nye article 3//
+       overskrift.appendChild(overskriftText);
+       newArticle.appendChild(overskrift);
+       mainSection.appendChild(newArticle);
+       
+       //ny paragraph på den nye article 3//
+       paragraph.appendChild(paragraphText);
+       newArticle.appendChild(paragraph);
+
+       //nyt billede på den nye article 3//
+       picture.src = "https://placeimg.com/640/480/tech";
+       newArticle.appendChild(picture);
+
+
+    </script>
+</body>
+</html>
